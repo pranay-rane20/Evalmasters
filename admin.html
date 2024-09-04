@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Sidebar -->
+    <div class="flex">
+        <div class="w-64 bg-gray-800 h-screen p-4">
+            <div class="flex items-center justify-center mb-8">
+                <img  src="https://media.istockphoto.com/id/1361226317/photo/confident-man-at-park.jpg?s=1024x1024&w=is&k=20&c=n_eZejC2nHm6R3tHuj3pPDD_tORfrXfn0PRpFc7RdtE=" alt="User Profile" class="h-30 w-20 rounded-full">
+                <div class="ml-4">
+                    <h2 class="text-lg font-bold">John Thomson</h2>
+                    <p class="text-sm text-gray-400">Project Manager</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#" class="block py-2 px-4 bg-gray-700 rounded-lg mb-2">Dashboard</a>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded-lg mb-2">Projects</a>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded-lg mb-2">Invoices</a>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded-lg mb-2">Clients</a>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded-lg mb-2">Settings</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold">Project Management</h1>
+                <button class="bg-blue-600 py-2 px-4 rounded-lg hover:bg-blue-500">Select Date</button>
+            </div>
+
+            <!-- Overview Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold">Total Orders</h2>
+                    <p class="text-2xl font-bold mt-2">2,245</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold">Recent Order</h2>
+                    <p class="text-2xl font-bold mt-2">45%</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold">Cancelled Orders</h2>
+                    <p class="text-2xl font-bold mt-2">56%</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold">Total Revenue</h2>
+                    <p class="text-2xl font-bold mt-2">$53k</p>
+                </div>
+            </div>
+
+            <!-- Charts and Tables -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project Status -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold mb-4">Project Status</h2>
+                    <ul>
+                        <li class="mb-2">Angular Project <span class="text-red-500">(Delayed)</span></li>
+                        <li class="mb-2">HTML Project <span class="text-green-500">(Completed)</span></li>
+                        <li class="mb-2">PHP Project <span class="text-yellow-500">(In Progress)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Project Investment Chart -->
+                <div class="col-span-2 bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold mb-4">Project Investment</h2>
+                    <div class="h-40 bg-gray-700 rounded-lg overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://i.pinimg.com/564x/2a/7e/54/2a7e54add6b3524b650a6ba4f7fb01e1.jpg" alt="">
+                    </div> <!-- Placeholder for chart -->
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <!-- Project Statistics -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold mb-4">Project Statistics</h2>
+                    <div class="h-32 bg-gray-700 rounded-lg overflow-hidden">
+                        <img class="h-full w-full object-cover" src="https://i.pinimg.com/236x/4c/b3/73/4cb37399b1e51735c1688392f72c910c.jpg" alt="">
+                    </div> <!-- Placeholder for pie chart -->
+                </div>
+
+                <!-- Complete Invoices -->
+                <div class="col-span-2 bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-lg font-semibold mb-4">Complete Invoices</h2>
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-left p-2">Client</th>
+                                <th class="text-left p-2">Date</th>
+                                <th class="text-left p-2">Invoice</th>
+                                <th class="text-left p-2">Amount</th>
+                                <th class="text-left p-2">Status</th>
+                                <th class="text-left p-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-2">Hoyt Righer</td>
+                                <td class="p-2">Jan 13, 2020</td>
+                                <td class="p-2">INV-1342</td>
+                                <td class="p-2">$4,340</td>
+                                <td class="p-2 text-green-500">Paid</td>
+                                <td class="p-2"><a href="#" class="text-blue-500 hover:underline">View</a></td>
+                            </tr>
+                            <!-- More rows here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
